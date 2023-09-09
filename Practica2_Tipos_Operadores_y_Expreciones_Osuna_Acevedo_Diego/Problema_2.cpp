@@ -1,3 +1,8 @@
+//Problema 2 Taller2
+//08/09/2023
+//Crear un programa que tome una calificación numérica y la convierta en una
+//calificación en letra utilizando operadores ternarios.
+//TAller2_actividad2
 #include <stdio.h>
 int cal;
 

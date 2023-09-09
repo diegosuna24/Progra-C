@@ -1,3 +1,10 @@
+//Problema 1 Taller2
+//08/09/2023
+//Crear un programa que permita a los usuarios ingresar un número entero, especificar
+//el número de bits que se deben considerar y luego analizar el número en términos de
+//bits encendidos, posiciones y representación binaria.
+//TAller2_actividad1
+
 #include <stdio.h>
 #include <limits.h>
 

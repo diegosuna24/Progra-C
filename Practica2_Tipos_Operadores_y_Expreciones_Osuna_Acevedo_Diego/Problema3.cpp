@@ -1,3 +1,8 @@
+//Problema 3 Taller2
+//08/09/2023
+//El objetivo de este ejercicio es simular un sistema básico de gestión de inventario en
+//C, donde los usuarios pueden agregar y retirar elementos del inventario.
+//TAller2_actividad3
 #include<stdio.h>
 
 int almacen [10];
