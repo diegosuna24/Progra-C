@@ -16,6 +16,7 @@ int main(){
     numsecreto:
         srand(time(NULL));
         num=rand() % 100 + 1;
+        intentos=0;
 
     adivinanza:
         printf("Elige un numero:\t");
