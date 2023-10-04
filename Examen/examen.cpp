@@ -3,8 +3,11 @@
 #include <stdio.h>
 
 int limsup;
+int ban;
 
 int main() {
+
+    denuevo:
 
     printf("Da el limite superior: ");
     scanf("%d", &limsup);
@@ -25,6 +28,11 @@ int main() {
             if (sumadivisores == i) {
                 printf("%d es un numero perfecto\n", i);
             }
+        }
+        printf("Jugar de nuevo?  si==1 no==0");
+        scanf("%d",ban);
+        if(ban=1){
+            goto denuevo;
         }
     return 0; 
     }
