@@ -1,4 +1,5 @@
 //Diego Osuna Acevedo Examen 1
+//https://github.com/diegosuna24/Progra-C/tree/main/Examen
 
 #include <stdio.h>
 
