@@ -16,18 +16,18 @@ int main() {
     nombres[1] = "Osuna";
     nombres[2] = "Acevedo";
 
-    for (int i=0; i<3; i++) {
+    for (int i=0;i<3;i++) {
         printf("%s\n", nombres[i]);
     }
 
 
     // Parte 2
-    for (int i=0; i<3; i++) {
-        nombres[i] = (char *)malloc(100 * sizeof(char));
-        printf("Ingrese el nombre %d: ", i + 1);
+    for (int i=0;i<3;i++) {
+        nombres[i]=(char *)malloc(100 * sizeof(char));
+        printf("Nombre %d: ", i + 1);
         scanf("%s", nombres[i]);
     }
-    for (int i=0; i<3; i++) {
+    for (int i=0;i<3;i++) {
         printf("%s\n", nombres[i]);
         free(nombres[i]);
     }
@@ -37,33 +37,30 @@ int main() {
     imprimirNombres(nombres, 3);
 
     // Parte 4
-    printf("\nInvertir nombres:\n");
     invertirCadena(nombres, 3);
     imprimirNombres(nombres, 3);
 
     // Parte 5
     ordenar(nombres);
 
-
-
     return 0;
 }
 
 void imprimirNombres(char **nombres, int num) {
-    for (int i = 0; i < num; i++) {
+    for (int i=0;i<num;i++) {
         printf("%s\n", nombres[i]);
     }
 }
 
 void invertirCadena(char **nombres, int num) {
-    for (int i = 0; i < num; i++) {
-        if (nombres[i] != NULL) {
-            int longitud = strlen(nombres[i]);
+    for (int i=0;i<num;i++) {
+        if (nombres[i] !=NULL) {
+            int longitud=strlen(nombres[i]);
             char temp;
-            for (int j = 0; j < longitud / 2; j++) {
-                temp = nombres[i][j];
-                nombres[i][j] = nombres[i][longitud - j - 1];
-                nombres[i][longitud - j - 1] = temp;
+            for (int j=0;j<longitud/2;j++) {
+                temp=nombres[i][j];
+                nombres[i][j]=nombres[i][longitud-j-1];
+                nombres[i][longitud-j-1]=temp;
             }
         }
     }
