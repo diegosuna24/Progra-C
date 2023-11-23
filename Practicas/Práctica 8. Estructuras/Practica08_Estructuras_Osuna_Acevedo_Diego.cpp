@@ -1,3 +1,11 @@
+/*
+Nombre del archivo: Practica08_Estructuras_Osuna_Acevedo_Diego.cpp
+Diego Osuna Acevedo
+22/11/2023
+Descripción: simular un sistema de gestión de inventario en C
+utilizando estructuras (structs) donde los usuarios pueden agregar y retirar elementos
+del inventario.
+*/
 #include <stdio.h>
 #include<stdio.h>
 #include<stdlib.h>
@@ -131,14 +139,25 @@ void agregar (){
     vect[n].numproduct=n+1;
     n++;
 }
+/*
+Función: mostrar
+Descripción: Imprime todos los valores de la estructura en forma de tabla
 
+*/
 void mostrar(){
     printf("%-10s %-15s %-10s %-5s \n","NumProduct","Producto","Cantidad","Precio");
     for (int i=0;i<n;i++){
         printf("%-10d %-15s %-10d %-5d\n",vect[i].numproduct,vect[i].nombre,vect[i].cantidad,vect[i].precio);
     }
 }
+/*
+Función: editar
+Descripción: Primero pregunta que producto es el que se quiere editar y se se encuentra 
+pregunta el dato que de quiere modificar y lo sustituye.
 
+
+
+*/
 void editar(){
     char aux[25];
      int cant;
@@ -205,6 +224,13 @@ void editar(){
 }
 
 
+/*
+Función: busqueda
+Descripción: busqueda secuancial en el campo llave
+Parámetros:
+- x: Es el valor que se busca.
+*/
+
 int busqueda(int x){
     for(int i=0;i<=n;i++){
         if(vect[i].numproduct==x){
@@ -214,6 +240,10 @@ int busqueda(int x){
     return -1;
 }
 
+/*
+Función: valor total
+Descripción: En cada uno de los elementos se multiplica el precio del producto por la cantidad y se suma
+*/
 void valortotal() {
     int valtotal = 0;  
 
@@ -224,6 +254,11 @@ void valortotal() {
     printf("El valor de todo el inventario es %d\n", valtotal);
 }
 
+/*
+Función: ordenar
+Descripción: pregunta como se quiere ordenar la estructura y manda llamar la unfuin de ordenacion dependiendo de la eleccion
+
+*/
 void ordenar(){
      char aux[10];
      int cant;
@@ -246,11 +281,25 @@ void ordenar(){
  
 }
 
+/*
+Función: intercambiar
+Descripción: Intercambia dos elementos de tipo TProducto.
+Parámetros:
+- a:Puntero a la primera estructura TProducto.
+- b:Puntero a la segunda estructura TProducto.
+*/
 void intercambiar(struct Producto*a, struct Producto*b) {
     struct Producto temp = *a;
     *a = *b;
     *b = temp;
 }
+/*
+Función: ordenarprecio
+Descripción: Ordena  TProducto por el campo del precio utilizando el metodo de la burbuja.
+Parámetros:
+- arr: El array de productos que se va a ordenar.
+- n: La cantidad de elementos en la estructura.
+*/
 void ordenarprecio(TProducto arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
@@ -260,6 +309,13 @@ void ordenarprecio(TProducto arr[], int n) {
         }
     }
 }
+/*
+Función: ordenarcantidad
+Descripción: Ordena  TProducto por el campo de cantidad utilizando el metodo de la burbuja.
+Parámetros:
+- arr: El array de productos que se va a ordenar.
+- n: La cantidad de elementos en la estructura.
+*/
 void ordenarcantidad(TProducto arr[], int n) {
     for (int i = 0; i < n - 1; i++) {
         for (int j = 0; j < n - i - 1; j++) {
